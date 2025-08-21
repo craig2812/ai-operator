@@ -1,0 +1,44 @@
+{
+  "name": "@craig/ai-operator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Operator system for managing AI agents and workflows in VS Code and Visual Studio",
+  "main": "install.js",
+  "bin": {
+    "ai-operator": "./install.js"
+  },
+  "scripts": {
+    "install": "node install.js"
+  },
+  "keywords": [
+    "ai",
+    "operator",
+    "agents",
+    "vscode",
+    "visual-studio",
+    "github-copilot",
+    "mcp"
+  ],
+  "author": "Craig Farrell",
+  "license": "MIT",
+  "files": [
+    ".ai-operator/agents/",
+    ".ai-operator/commands/",
+    ".ai-operator/documentation/",
+    ".ai-operator/includes/",
+    ".ai-operator/instructions/",
+    ".ai-operator/config.yml",
+    ".github/",
+    ".vscode/",
+    "install.js",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craig2812/ai-operator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/craig2812/ai-operator/issues"
+  },
+  "homepage": "https://github.com/craig2812/ai-operator#readme"
+}

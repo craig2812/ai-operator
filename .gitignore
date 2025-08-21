@@ -1,0 +1,7 @@
+.idea/
+.vscode/
+.ai-operator/config.local.yml
+dev/
+node_modules/
+*.log
+

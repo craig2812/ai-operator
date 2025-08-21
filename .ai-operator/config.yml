@@ -1,0 +1,98 @@
+# AI Operator configuration file
+# Enhanced configuration with better variable management and path definitions
+# How this config is used (default mode):
+# - Optional and additive: existing ADO-centric commands do not depend on it.
+# - Helpers/commands MAY read this to decide which instruction files to prefer
+#   when building context (e.g., code style, tech stack) or scaffolding specs.
+# - With `project_type: default`, the operator SHOULD use the `default`
+#   `include_instructions` list below. If any files are missing, nothing breaks.
+# - Switching to `dotnet` or `javascript` changes which code-style instruction
+#   files are preferred. You can add more project types as needed.
+# - Safe to commit. Do not put secrets here.
+# This file is additive and does not change existing commands.
+
+# Version of your local AI Operator config schema/content
+ai_operator_version: "1.0.0"
+
+# Tooling flags and environment switches
+copilot: true  # Used to hint agent behaviors for GitHub Copilot Agent mode
+
+# Feature toggles for enhanced workflow components
+features:
+  enable_pre_flight: true
+  enable_post_flight: true
+  enable_command_templates: true
+  enable_agent_templates: true
+
+# Active project type (change to "dotnet" or "javascript" to opt in)
+# If omitted, treat as `default`.
+project_type: default
+
+# Commonly used path variables for reference in commands
+paths:
+  spec_lite_path: .ai-operator/documentation/spec-lite.md
+  tasks_path: .ai-operator/documentation/tasks.md
+  roadmap_path: .ai-operator/documentation/roadmap.md
+  instructions_base: .ai-operator/instructions
+  includes_base: .ai-operator/includes
+  agents_base: .ai-operator/agents
+  commands_base: .ai-operator/commands
+
+# Command categories for organization
+command_categories:
+  core_workflow:
+    - workitem-analyze
+    - workitem-plan
+    - workitem-clarify
+    - workitem-complete
+    - workitem-release
+  spec_management:
+    - create-spec
+    - create-spec-from-ado
+    - create-tasks
+    - execute-tasks
+    - complete-tasks
+  quality_assurance:
+    - acceptance-check
+    - code-review
+    - test-coverage-validate
+    - test-run
+  setup_infrastructure:
+    - setup-generate-copilot-instructions
+    - setup-project-infrastructure
+    - setup-instruction-files
+    - setup-documentation-structure
+  project_management:
+    - impediment-track
+    - release-prepare
+
+# Project type definitions and which instruction files to load by type
+project_types:
+  default:
+    include_instructions:
+      - .ai-operator/instructions/best-practices.md
+      - .ai-operator/instructions/tech-stack.md
+      - .ai-operator/templates/code-styles/code-style.md
+      - .ai-operator/instructions/git-workflow.md
+  dotnet:
+    include_instructions:
+      - .ai-operator/templates/code-styles/code-style-dotnet.md
+      - .ai-operator/instructions/tech-stack.md
+      - .ai-operator/instructions/git-workflow.md
+  javascript:
+    include_instructions:
+      - .ai-operator/templates/code-styles/code-style-javascript.md
+      - .ai-operator/instructions/tech-stack.md
+      - .ai-operator/instructions/git-workflow.md
+
+# Documentation pointers (used by spec commands and helpers)
+documentation:
+  spec_lite: .ai-operator/documentation/spec-lite.md
+  tasks: .ai-operator/documentation/tasks.md
+  roadmap: .ai-operator/documentation/roadmap.md
+
+# Version tracking and project configuration
+version_history:
+  - version: "1.0.0"
+    date: "2025-08-19"
+    changes: "Enhanced configuration with variable management, command categories, and improved workflow structure"
