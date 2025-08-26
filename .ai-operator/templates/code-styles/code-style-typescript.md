@@ -1,4 +1,9 @@
-# TypeScript Code Style
+---
+description: "TypeScript-specific coding standards and best practices"
+applyTo: "**/*.ts,**/*.tsx"
+---
+
+# TypeScript Advanced Code Style
 
 ## Naming Conventions
 - Use camelCase for variables and functions

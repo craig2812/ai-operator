@@ -1,26 +1,28 @@
 # Contributing to AI Operator
 
-Thank you for your interest in contributing to AI Operator! This document provides guidelines for contributing to the project.
+This document provides guidelines for contributing to the project.
 
 ## Development Setup
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/craig2812/ai-operator.git
    cd ai-operator
    ```
 
 2. Install dependencies (if any):
+
    ```bash
    npm install
    ```
 
-3. Development files are located in the `dev/` directory
+3. Development files are located in the `development/` directory
 
 ## Project Structure
 
 - **Core Package Files**: Files that will be included in the NPM package
-- **Development Files**: Located in `dev/` directory - not included in package
+- **Development Files**: Located in `development/` directory - not included in package
 - **Documentation**: Update relevant docs when making changes
 
 ## Making Changes
@@ -36,6 +38,15 @@ Thank you for your interest in contributing to AI Operator! This document provid
 - Follow existing code style and conventions
 - Use meaningful commit messages
 - Update documentation for any user-facing changes
+
+## Project Philosophy
+
+AI Operator is designed as an experimental platform for exploring AI workflow orchestration rather than a prescriptive solution. When contributing, please consider:
+
+- **Simplicity over Complexity**: While the current implementation is feature-rich, contributions should focus on making workflows simpler and more intuitive
+- **Flexibility**: Changes should enhance rather than constrain how teams use AI tools
+- **Documentation**: New features should include clear documentation and use cases
+- **Backward Compatibility**: Changes should not break existing workflows without clear justification
 
 ## Testing
 

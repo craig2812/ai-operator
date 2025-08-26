@@ -1,14 +1,16 @@
 {
-  "name": "@craig/ai-operator",
+  "name": "ai-operator",
   "version": "1.0.0",
   "private": true,
-  "description": "AI Operator system for managing AI agents and workflows in VS Code and Visual Studio",
+  "description": "AI Operator: Context management and workflow orchestration system for AI-assisted development with GitHub Copilot. Provides structured agent workflows, chatmodes, and context engineering for consistent AI interactions.",
   "main": "install.js",
   "bin": {
     "ai-operator": "./install.js"
   },
   "scripts": {
-    "install": "node install.js"
+    "install": "node install.js",
+    "link-global": "npm link",
+    "setup": "node install.js"
   },
   "keywords": [
     "ai",
@@ -17,21 +19,24 @@
     "vscode",
     "visual-studio",
     "github-copilot",
-    "mcp"
+    "mcp",
+    "context-management",
+    "workflow",
+    "devtools",
+    "ai-assisted-development",
+    "copilot-customization",
+    "prompt-engineering",
+    "chatmodes"
   ],
   "author": "Craig Farrell",
   "license": "MIT",
   "files": [
-    ".ai-operator/agents/",
-    ".ai-operator/commands/",
-    ".ai-operator/documentation/",
-    ".ai-operator/includes/",
-    ".ai-operator/instructions/",
-    ".ai-operator/config.yml",
-    ".github/",
-    ".vscode/",
+    "assets/chatmodes/",
+    "assets/prompts/",
+    ".ai-operator/",
     "install.js",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "repository": {
     "type": "git",
@@ -40,5 +45,8 @@
   "bugs": {
     "url": "https://github.com/craig2812/ai-operator/issues"
   },
-  "homepage": "https://github.com/craig2812/ai-operator#readme"
+  "homepage": "https://github.com/craig2812/ai-operator#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  }
 }

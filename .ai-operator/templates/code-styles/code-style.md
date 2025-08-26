@@ -1,4 +1,9 @@
-# Code Style (General)
+---
+description: "General code style guidelines for all programming languages"
+applyTo: "**"
+---
+
+# Code Style – General
 
 Purpose: Provide concise, enforceable conventions for this repo. Used by Copilot/agents when generating or reviewing code. Keep it brief and practical.
 

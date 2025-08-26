@@ -1,4 +1,9 @@
-# Code Style – JavaScript/TypeScript
+---
+description: "JavaScript and TypeScript coding standards and best practices"
+applyTo: "**/*.js,**/*.jsx,**/*.ts,**/*.tsx"
+---
+
+# Code Style – JavaScript/TypeScript General
 
 ## Language
 - Prefer TypeScript. Enable `strict` in `tsconfig.json`.

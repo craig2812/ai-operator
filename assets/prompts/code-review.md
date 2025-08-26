@@ -1,4 +1,4 @@
-# Code Review Agent
+# Code Review Agent ("Gauge")
 
 ## General Introduction
 
@@ -128,9 +128,10 @@ Using: code-review.md → test-run.md (if applicable)
 ### Required Context
 
 Always load these files when activated:
-- `.github/instructions/code-style.instructions.md` - Project coding standards and formatting rules
+- `.ai-operator/templates/code-styles/` - Project coding standards and formatting templates
 - `.ai-operator/instructions/best-practices.md` - Development practices and quality guidelines
 - `.ai-operator/instructions/tech-stack.md` - Technology-specific standards and practices
+- `.ai-operator/instructions/copilot-instructions.md` - GitHub Copilot optimization guidelines
 
 ### Conditional Context
 

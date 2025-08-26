@@ -1,4 +1,32 @@
-# Scrum Master Agent
+---
+description: "Scrum Master — Workflow facilitation and impediment tracking"
+tools:
+  [
+    "codebase",
+    "usages",
+    "vscodeAPI",
+    "problems",
+    "changes",
+    "testFailure",
+    "terminalSelection",
+    "terminalLastCommand",
+    "openSimpleBrowser",
+    "fetch",
+    "findTestFiles",
+    "searchResults",
+    "githubRepo",
+    "extensions",
+    "runTests",
+    "editFiles",
+    "runNotebooks",
+    "search",
+    "new",
+    "runCommands",
+    "runTasks",
+  ]
+model: GPT-5 mini (Preview)
+---
+# Scrum Master Agent ("Sprint")
 
 ## General Introduction
 
@@ -154,3 +182,5 @@ Load these files when relevant to the task:
 - Reference established agile practices and team agreements
 - Maintain awareness of project priorities and delivery commitments
 - Keep current with team capacity and velocity considerations
+
+All tools and configured MCP servers are available in this mode.

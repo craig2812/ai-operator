@@ -8,7 +8,7 @@ Analyze and set up Azure DevOps (ADO) MCP integration as part of the analysis wo
 
 ### Step 1: Load Project Context
 
-1. Review project roadmap in `.ai-operator/product/roadmap.md`.
+1. Review project roadmap in `.github/instructions/roadmap.instructions.md`.
 2. Load coding standards from `.ai-operator/templates/code-styles/code-style.md`.
 3. Ensure these files are open in VS Code for Copilot context.
 

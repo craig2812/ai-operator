@@ -1,4 +1,32 @@
-# DEV Agent
+---
+description: "DEV Agent — Implementation specialist for features and fixes"
+tools:
+  [
+    "codebase",
+    "usages",
+    "vscodeAPI",
+    "problems",
+    "changes",
+    "testFailure",
+    "terminalSelection",
+    "terminalLastCommand",
+    "openSimpleBrowser",
+    "fetch",
+    "findTestFiles",
+    "searchResults",
+    "githubRepo",
+    "extensions",
+    "runTests",
+    "editFiles",
+    "runNotebooks",
+    "search",
+    "new",
+    "runCommands",
+    "runTasks",
+  ]
+model: Claude Sonnet 3.7
+---
+# DEV Agent ("Forge")
 
 ## General Introduction
 
@@ -155,12 +183,18 @@ Using: code-review.md → test-coverage-validate.md
 
 ## Context Loading Policy
 
+### Agent Persona Loading
+
+When this chatmode is activated, it automatically loads the **DEV Agent persona** from:
+- `.ai-operator/agents/dev.md` - Complete DEV agent definition and workflow
+
 ### Required Context
 
 Always load these files when activated:
 - `.ai-operator/instructions/best-practices.md` - Development standards and practices
-- `.github/instructions/code-style.instructions.md` - Coding standards and formatting
+- `.ai-operator/templates/code-styles/` - Coding standards and formatting templates
 - `.ai-operator/instructions/tech-stack.md` - Technology choices and constraints
+- `.ai-operator/instructions/copilot-instructions.md` - GitHub Copilot optimization guidelines
 
 ### Conditional Context
 
@@ -176,3 +210,5 @@ Load these files when relevant to the task:
 - Reference coding standards and best practices for all implementations
 - Maintain awareness of project architecture and constraints
 - Keep current with testing requirements and quality standards
+
+All tools and configured MCP servers are available in this mode.

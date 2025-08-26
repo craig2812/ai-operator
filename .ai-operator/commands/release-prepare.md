@@ -7,7 +7,7 @@ Prepare for release or deployment, validate readiness, and communicate status to
 ## Step-by-Step Instructions
 
 ### Step 1: Load Release Context
-1. Review the project roadmap in `.ai-operator/product/roadmap.md`.
+1. Review the project roadmap in `.github/instructions/roadmap.instructions.md`.
 2. Load coding standards from `.github/instructions/code-style.instructions.md`.
 3. Ensure these files are open in VS Code for Copilot context.
 

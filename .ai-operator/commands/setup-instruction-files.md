@@ -21,7 +21,7 @@ Analyze a current project or mission statement to create GitHub Copilot instruct
 ## Step-by-Step Instructions
 
 ### Step 1: Load Project Context
-1. Review project roadmap in `.ai-operator/product/roadmap.md`.
+1. Review project roadmap in `.github/instructions/roadmap.instructions.md`.
 2. Load coding standards from `.github/instructions/code-style.instructions.md`.
 3. Ensure these files are open in VS Code for Copilot context.
 
@@ -39,37 +39,75 @@ Analyze a current project or mission statement to create GitHub Copilot instruct
 
 ### Step 2: Best Practices Instruction File Creation
 
-- [ ] Create `.ai-operator/instructions/best-practices.md` based on project analysis
+- [ ] Create `.github/instructions/best-practices.instructions.md` with proper frontmatter:
+  ```markdown
+  ---
+  description: "Project-specific development principles and best practices"
+  applyTo: "**"
+  ---
+  
+  # Best Practices
+  [Content follows...]
+  ```
 - [ ] Include project-specific development principles and patterns
 - [ ] Document error handling standards and logging practices
 - [ ] Define testing strategies and quality assurance approaches
 - [ ] Include security best practices relevant to the project
+- [ ] **CRITICAL**: Include applyTo: "**" to apply to all files globally
 
 ### Step 3: Technology Stack Documentation
 
-- [ ] Create `.ai-operator/instructions/tech-stack.md` with comprehensive stack details
+- [ ] Create `.github/instructions/tech-stack.instructions.md` with proper frontmatter:
+  ```markdown
+  ---
+  description: "Technology stack details and framework specifications"
+  applyTo: "**"
+  ---
+  
+  # Technology Stack
+  [Content follows...]
+  ```
 - [ ] Document primary languages, frameworks, and versions
 - [ ] Include build tools, package managers, and dependency management
 - [ ] Document deployment tools and infrastructure components
 - [ ] Add database systems and data storage solutions
+- [ ] **CRITICAL**: Use applyTo: "**" for global application
 
 ### Step 4: Code Style Guidelines Creation
 
-- [ ] Create base `.ai-operator/instructions/code-style.md` file
-- [ ] Create language-specific style guides as needed:
-  - `code-style-javascript.md` for JavaScript/TypeScript projects
-  - `code-style-dotnet.md` for .NET projects
-  - Additional language-specific files as identified
+- [ ] Create base `.github/instructions/code-style.instructions.md` file with frontmatter:
+  ```markdown
+  ---
+  description: "General code style guidelines for all programming languages"
+  applyTo: "**"
+  ---
+  ```
+- [ ] Create language-specific style guides with targeted frontmatter:
+  - `code-style-javascript.instructions.md` → `applyTo: "**/*.js,**/*.jsx"`
+  - `code-style-typescript.instructions.md` → `applyTo: "**/*.ts,**/*.tsx"`
+  - `code-style-dotnet.instructions.md` → `applyTo: "**/*.cs"`
+  - Additional language-specific files with appropriate applyTo patterns
 - [ ] Include formatting rules, naming conventions, and structure guidelines
 - [ ] Document comment and documentation standards
+- [ ] **CRITICAL**: Each style guide must have applyTo frontmatter targeting relevant file extensions
 
 ### Step 5: Git Workflow Instructions
 
-- [ ] Create `.ai-operator/instructions/git-workflow.md` with project workflow
+- [ ] Create `.github/instructions/git-workflow.instructions.md` with proper frontmatter:
+  ```markdown
+  ---
+  description: "Git workflow, branching strategy, and version control practices"
+  applyTo: "**"
+  ---
+  
+  # Git Workflow
+  [Content follows...]
+  ```
 - [ ] Define branching strategy and naming conventions
 - [ ] Document commit message standards and PR requirements
 - [ ] Include code review process and merge criteria
 - [ ] Add deployment and release procedures
+- [ ] **CRITICAL**: Use applyTo: "**" for global workflow application
 
 ### Step 6: Template-Driven File Creation
 
@@ -143,6 +181,6 @@ When working on this feature, ensure these files are open in VS Code:
 
 When this command completes successfully:
 
-1. **Next Command**: @.ai-operator/commands/setup-documentation-structure.md to create documentation templates
+1. **Next Command**: @.ai-operator/commands/ado-mcp-setup.md to configure MCP servers (optional)
 2. **Deliverables**: Complete set of project-specific instruction files
 3. **Validation**: All instruction files tested and integrated with project configuration
